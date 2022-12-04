@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="portfolios.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Me1.jpg" class="logo" width="300" lenght="300">
+            <ul id="sidemenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="portfolios.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="galleries.html">Gallery</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+        
+            <h1>Freedom of <span>Time </span></h1>
+    </div>
+</div>
+</div>
+
+<!-- ---------------Hobbies-------------- -->
+<div id="Hobbies">
+    <div class="container">
+        <h1 class="sub-title">Hobbies</h1>
+        <div class="Hobbies-list">
+            <div>
+               <i class="fa-solid fa-book"></i>
+                <h2>Literature</h2>
+                <p>Reading fiction and non-fiction books with thriller and mystery genre.</p>
+                <a href="https://www.goodreads.com/">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-music"></i>
+                <h2>Music</h2>
+                <p>Listening a different state song especially Japanese.</p>
+                <a href="https://www.youtube.com/feed/library">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-gamepad"></i>
+                <h2>Games</h2>
+                <p>Video games and Mobile games.</p>
+                <a href="https://genshin.hoyoverse.com/en/home">Learn more</a>
+            </div>
+        </div>
+    </div> 
+</div>
+    
+    
+    <script>
+    
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+              tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+              tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    
+</script>
+    
+<script>
+    
+    var sidemenu = document.getElementById("sidemenu");
+    
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+    
+</script>
+
+    
+    </body>
+</html>
